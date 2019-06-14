@@ -1,7 +1,7 @@
 # Fractal generator
 
-Author: Andrea Rastelli\\
-Email: andrearastelli@live.com
+- Author: Andrea Rastelli
+- Email: andrearastelli@live.com
 
 ## Algorithm
 Simple implementation of the Mandelbrot fractal algorithm
