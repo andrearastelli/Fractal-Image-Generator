@@ -182,8 +182,8 @@ struct Pixel {
 
 int main()
 {
-    int const WIDTH = 800;
-    int const HEIGHT = 600;
+    int const WIDTH = 1920;
+    int const HEIGHT = 1080;
 
     std::vector<Pixel> pixels;
 
@@ -204,8 +204,8 @@ int main()
         (new int[Mandelbrot::MAX_ITERATIONS + 1]{0});
 
     auto pixelEval = [&](int x, int y) -> std::uint8_t {
-        double xFractal {(x - WIDTH / 2.0 - 0) * (4.5 / HEIGHT) };
-        double yFractal {(y - HEIGHT / 2.0) * (4.5 / HEIGHT) };
+        double xFractal {(x - WIDTH / 2.0 - 250) * (1.5 / HEIGHT) };
+        double yFractal {(y - HEIGHT / 2.0) * (1.5 / HEIGHT) };
 
         int iterations = Mandelbrot::getIterations(xFractal, yFractal);
 
@@ -255,14 +255,6 @@ int main()
         if (t.joinable())
             t.join();
     }
-
-    int totalPixels {0};
-    for (int i=0; i<Mandelbrot::MAX_ITERATIONS; ++i) {
-        std::cout<<histogram[i]<<" "<<std::flush;
-        totalPixels += histogram[i];
-    }
-    std::cout<<"\n\nIterations: "<<totalPixels<<"\n";
-    std::cout<<"Width * height: "<<WIDTH*HEIGHT<<"\n";
 
     bitmap.write("test.bmp");
 
