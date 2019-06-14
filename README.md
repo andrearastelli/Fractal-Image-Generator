@@ -1,6 +1,6 @@
 # Fractal generator
 
-Author: Andrea Rastelli
+Author: Andrea Rastelli\\
 Email: andrearastelli@live.com
 
 ## Algorithm
